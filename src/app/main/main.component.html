@@ -1,0 +1,73 @@
+<p>
+  <mat-toolbar color="primary">
+    <span>Test App</span>
+  </mat-toolbar>
+</p>
+
+
+<div class="container">
+  <h2 class="text-center">User Info</h2>
+
+  <div class="container center_div">
+
+    <form class="example-form">
+      <mat-form-field class="example-full-width" style="margin-right: 20px;">
+        <mat-label>Your Name</mat-label>
+        <input matInput value="" name="username" [(ngModel)]="userObj.username">
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width" style="margin-right: 20px;">
+        <mat-label>Your Email</mat-label>
+        <input matInput value="" name="email" [(ngModel)]="userObj.email">
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width" style="margin-right: 20px;">
+        <mat-label>Your Contact</mat-label>
+        <input matInput value="" name="mobile" [(ngModel)]="userObj.mobile">
+      </mat-form-field>
+
+      <button mat-raised-button color="primary" (click)="addRecord()">Add Record</button>
+
+    </form>
+
+
+
+    <!-- <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+  </table> -->
+
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">UserName</th>
+          <th scope="col">Email</th>
+          <th scope="col">Mobile</th>
+          <th scope="col">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let list of user; index as i">
+          <th scope="row">{{ i + 1 }}</th>
+          <td>
+            {{ list.username }}
+          </td>
+          <td>{{ list.email}}</td>
+          <td>{{ list.mobile }}</td>
+          <td>
+            <button (click)="updateRecord(list)" mat-mini-fab color="basic"
+              aria-label="Example icon button with a menu icon">
+              <mat-icon>edit</mat-icon>
+            </button>
+
+            <button (click)="deleteRecord(list._id)" mat-mini-fab color="warn"
+              aria-label="Example icon button with a menu icon">
+              <mat-icon>delete</mat-icon>
+            </button>
+
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

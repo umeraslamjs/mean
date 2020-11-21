@@ -1,0 +1,27 @@
+
+<div class="container">
+    <h2 class="text-center">User Update</h2>
+  
+    <div class="container center_div">
+  
+      <form class="example-form">
+        <mat-form-field class="example-full-width" style="margin-right: 20px;">
+          <mat-label>Your Name</mat-label>
+          <input matInput value="" name="username" [(ngModel)]="userObj.username">
+        </mat-form-field>
+  
+        <mat-form-field class="example-full-width" style="margin-right: 20px;">
+          <mat-label>Your Email</mat-label>
+          <input matInput value="" name="email" [(ngModel)]="userObj.email">
+        </mat-form-field>
+  
+        <mat-form-field class="example-full-width" style="margin-right: 20px;">
+          <mat-label>Your Contact</mat-label>
+          <input matInput value="" name="mobile" [(ngModel)]="userObj.mobile">
+        </mat-form-field>
+  
+        <button mat-raised-button color="primary" (click)="update()">Update Record</button>
+  
+      </form>
+</div>
+</div>  
